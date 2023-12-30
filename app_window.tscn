@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwaclmoib3o6s"]
+
+[ext_resource type="PackedScene" uid="uid://bhhybrsqt6p34" path="res://scenes/TextParse.tscn" id="1_4ejs2"]
+[ext_resource type="Script" path="res://app_window.gd" id="1_pvkc4"]
+
+[node name="AppWindow" type="Node2D"]
+script = ExtResource("1_pvkc4")
+
+[node name="TextParse" parent="." instance=ExtResource("1_4ejs2")]
+offset_left = 148.0
+offset_top = 69.0
+offset_right = 148.0
+offset_bottom = 69.0

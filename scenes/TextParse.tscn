@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhhybrsqt6p34"]
+
+[ext_resource type="Script" path="res://scenes/TextParse.gd" id="1_c06nc"]
+
+[node name="TextParse" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_c06nc")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+offset_right = 628.0
+offset_bottom = 269.0
+
+[node name="Input" type="TextEdit" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "{\"name\": \"John\", \"age\": 30, \"cars\": [\"Ford\", \"BMW\", \"Fiat\"]}"
+
+[node name="Output" type="TextEdit" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ParseBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 278.0
+offset_right = 408.0
+offset_bottom = 313.0
+text = "Beautify"
+
+[node name="SelectAllBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 548.0
+offset_top = 279.0
+offset_right = 583.0
+offset_bottom = 314.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "Select All"
+text = "⛶"
+
+[node name="CopyBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 591.0
+offset_top = 279.0
+offset_right = 626.0
+offset_bottom = 314.0
+tooltip_text = "Copy"
+text = "📋"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 280.0
+offset_right = 49.0
+offset_bottom = 303.0
+text = "Valid:"
+
+[node name="ValidLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 285.0
+offset_right = 83.0
+offset_bottom = 308.0
+text = "🔴"
+
+[connection signal="text_changed" from="HSplitContainer/Input" to="." method="_on_input_text_changed"]
+[connection signal="pressed" from="ParseBtn" to="." method="_on_parse_btn_pressed"]
+[connection signal="pressed" from="SelectAllBtn" to="." method="_on_select_all_btn_pressed"]
+[connection signal="pressed" from="CopyBtn" to="." method="_on_copy_btn_pressed"]
