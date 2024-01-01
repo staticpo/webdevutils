@@ -1,8 +1,8 @@
 extends Control
 
-@onready var input = $HSplitContainer/Input
-@onready var output = $HSplitContainer/Output
-@onready var validLabel = $ValidLabel
+@onready var input = $Control/HSplitContainer/Input
+@onready var output = $Control/HSplitContainer/Output
+@onready var validLabel = $Control/ValidLabel
 
 var json = JSON.new()
 
