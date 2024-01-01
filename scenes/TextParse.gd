@@ -13,6 +13,9 @@ func _on_parse_btn_pressed():
 
 # Beautifies a JSON string
 func beautify_json(json_string: String, indent_level: int = 4) -> String:
+	if json_string == "":
+		return ""
+	
 	var error = json.parse(json_string)
 	
 	if error != OK:

@@ -14,22 +14,21 @@ size_flags_vertical = 2
 script = ExtResource("1_c06nc")
 
 [node name="Control" type="Control" parent="."]
-custom_minimum_size = Vector2(640, 480)
+custom_minimum_size = Vector2(800, 480)
 layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
-custom_minimum_size = Vector2(640, 480)
 layout_mode = 0
-offset_right = 499.0
-offset_bottom = 344.0
-color = Color(0.180392, 0.482353, 1, 1)
+offset_right = 820.0
+offset_bottom = 480.0
+color = Color(0.152941, 0.572549, 0.654902, 0.196078)
 
 [node name="HSplitContainer" type="HSplitContainer" parent="Control"]
 custom_minimum_size = Vector2(440, 250)
 layout_mode = 2
 offset_left = 22.0
 offset_top = 11.0
-offset_right = 616.0
+offset_right = 776.0
 offset_bottom = 404.0
 
 [node name="Input" type="TextEdit" parent="Control/HSplitContainer"]
@@ -46,9 +45,9 @@ size_flags_horizontal = 3
 [node name="ParseBtn" type="Button" parent="Control"]
 texture_filter = 1
 layout_mode = 2
-offset_left = 288.0
+offset_left = 363.0
 offset_top = 420.0
-offset_right = 361.0
+offset_right = 436.0
 offset_bottom = 451.0
 text = "Beautify"
 
@@ -56,9 +55,9 @@ text = "Beautify"
 texture_filter = 1
 custom_minimum_size = Vector2(40, 2.08165e-12)
 layout_mode = 2
-offset_left = 528.0
+offset_left = 688.0
 offset_top = 420.0
-offset_right = 568.0
+offset_right = 728.0
 offset_bottom = 451.0
 tooltip_text = "Select All"
 text = "⛶"
@@ -66,9 +65,9 @@ text = "⛶"
 [node name="CopyBtn" type="Button" parent="Control"]
 custom_minimum_size = Vector2(40, 2.08165e-12)
 layout_mode = 2
-offset_left = 576.0
+offset_left = 736.0
 offset_top = 420.0
-offset_right = 616.0
+offset_right = 776.0
 offset_bottom = 451.0
 tooltip_text = "Copy"
 text = "📋"
@@ -87,9 +86,9 @@ text = "Valid:"
 texture_filter = 1
 layout_mode = 2
 offset_left = 75.0
-offset_top = 422.0
+offset_top = 424.0
 offset_right = 93.0
-offset_bottom = 445.0
+offset_bottom = 447.0
 text = "🔴"
 
 [connection signal="text_changed" from="Control/HSplitContainer/Input" to="." method="_on_input_text_changed"]
