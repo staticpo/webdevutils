@@ -17,6 +17,6 @@ size_flags_horizontal = 8
 [node name="JSON Beautify" parent="TabContainer" instance=ExtResource("1_4ejs2")]
 layout_mode = 2
 
-[node name="Pomodoro" parent="TabContainer" instance=ExtResource("3_2nss2")]
+[node name="🍅 Pomodoro" parent="TabContainer" instance=ExtResource("3_2nss2")]
 visible = false
 layout_mode = 2
