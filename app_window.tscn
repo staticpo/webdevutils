@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwaclmoib3o6s"]
+[gd_scene load_steps=4 format=3 uid="uid://bwaclmoib3o6s"]
 
 [ext_resource type="PackedScene" uid="uid://bhhybrsqt6p34" path="res://scenes/TextParse.tscn" id="1_4ejs2"]
 [ext_resource type="Script" path="res://app_window.gd" id="1_pvkc4"]
+[ext_resource type="PackedScene" uid="uid://dat1h8bpldp6g" path="res://scenes/Pomodoro.tscn" id="3_2nss2"]
 
 [node name="AppWindow" type="Node2D"]
 script = ExtResource("1_pvkc4")
@@ -14,4 +15,8 @@ offset_bottom = 649.0
 size_flags_horizontal = 8
 
 [node name="JSON Beautify" parent="TabContainer" instance=ExtResource("1_4ejs2")]
+layout_mode = 2
+
+[node name="Pomodoro" parent="TabContainer" instance=ExtResource("3_2nss2")]
+visible = false
 layout_mode = 2

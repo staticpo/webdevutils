@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://dat1h8bpldp6g"]
+
+[ext_resource type="Script" path="res://scenes/Pomodoro.gd" id="1_votqy"]
+[ext_resource type="FontFile" uid="uid://dhkug2jv8hek1" path="res://assets/RubikDoodleShadow-Regular.ttf" id="2_eq2dw"]
+
+[node name="Pomodoro" type="CenterContainer"]
+script = ExtResource("1_votqy")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(800, 480)
+layout_mode = 2
+color = Color(0.152941, 0.572549, 0.654902, 0.196078)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 2
+offset_left = -80.0
+offset_top = -30.0
+offset_right = 80.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("2_eq2dw")
+theme_override_font_sizes/font_size = 50
+text = "00:00"
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = -225.0
+offset_top = -16.0
+offset_right = -118.0
+offset_bottom = 17.0
+text = "Start"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
